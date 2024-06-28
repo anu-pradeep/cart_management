@@ -121,7 +121,7 @@ class _CommonAppbarState extends State<CommonAppbar> {
                             width: 50,
                           ),
                           Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.red,
                               shape: BoxShape.circle,
                             ),
