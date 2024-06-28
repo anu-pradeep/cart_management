@@ -1,5 +1,8 @@
+import 'package:cart_management/Custom%20Widgets/custom%20CART%20card.dart';
 import 'package:cart_management/Custom%20Widgets/custom%20appbar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 void main(){runApp(MaterialApp(home: CartPage(),));}
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -12,7 +15,7 @@ class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
 
-    return const DefaultTabController(
+    return DefaultTabController(
       length: 2,
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -21,8 +24,7 @@ class _CartPageState extends State<CartPage> {
         body: TabBarView(children: [
           Column(
             children: [
-              ListTile(title: Text("data"),
-              subtitle: Text("data"),)
+  CartCard()
             ],
           )
         ],),
