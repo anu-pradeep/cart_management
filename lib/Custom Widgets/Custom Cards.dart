@@ -15,7 +15,7 @@ class CardsCustomized extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 10, right: 10, left: 10, bottom: 160),
       child: Card(
-        color: Colors.white,
+        color: Colors.blue[50],
         child: Column(
           children: [
             Padding(

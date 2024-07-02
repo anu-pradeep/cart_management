@@ -1,14 +1,7 @@
-
 import 'package:cart_management/Custom%20Widgets/Custom%20Cards.dart';
 import 'package:flutter/material.dart';
 
 import 'Custom Widgets/custom appbar.dart';
-
-void main() {
-  runApp(const MaterialApp(
-    home: InventryScreen(),
-  ));
-}
 
 class InventryScreen extends StatefulWidget {
   const InventryScreen({super.key});

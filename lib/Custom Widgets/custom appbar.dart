@@ -25,7 +25,7 @@ class _CommonAppbarState extends State<CommonAppbar> {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.blue[100],
         title: Row(
           children: [
             Padding(
