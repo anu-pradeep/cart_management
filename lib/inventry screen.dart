@@ -28,7 +28,7 @@ class _InventryScreenState extends State<InventryScreen> {
                 children: [
                   CardsCustomized(),
                   CardsCustomized(),
-                 ],
+                ],
               ),
             ),
             SingleChildScrollView(

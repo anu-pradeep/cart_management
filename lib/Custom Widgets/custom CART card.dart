@@ -1,27 +1,23 @@
+// custom_cart_card.dart
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CartCard extends StatefulWidget {
+class CartCard extends StatelessWidget {
   const CartCard({
     super.key,
     required this.images,
     required this.productname,
     required this.productdetails,
     required this.productrate,
-    required this.onAddToCart, // Add this line
+    required this.onAddToCart,
   });
 
   final String images;
   final String productname;
   final String productdetails;
   final String productrate;
-  final VoidCallback onAddToCart; // Add this line
+  final VoidCallback onAddToCart;
 
-  @override
-  State<CartCard> createState() => _CartCardState();
-}
-
-class _CartCardState extends State<CartCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -32,8 +28,8 @@ class _CartCardState extends State<CartCard> {
             padding: const EdgeInsets.all(8.0),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
-              child: Image(
-                image: NetworkImage(widget.images),
+              child: Image.network(
+                images,
                 height: 100,
               ),
             ),
@@ -41,34 +37,38 @@ class _CartCardState extends State<CartCard> {
           Column(
             children: [
               const SizedBox(height: 5),
-              Text(
-                widget.productname,
-                style: GoogleFonts.abyssinicaSil(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 13,
-                    color: Colors.red[900]),
+              Padding(
+                padding: const EdgeInsets.only(right: 200),
+                child: Text(
+                  productname,
+                  style: GoogleFonts.abyssinicaSil(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 13,
+                      color: Colors.red[900]),
+                ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Text(
-                widget.productdetails,
+                productdetails,
                 style: GoogleFonts.abyssinicaSil(
                     fontSize: 11, fontWeight: FontWeight.w600),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Padding(
-                padding: const EdgeInsets.only(
-                  right: 250,
-                ),
+                padding: const EdgeInsets.only(right: 20),
                 child: Text(
-                  widget.productrate,
+                  productrate,
                   style: GoogleFonts.abyssinicaSil(
                       fontSize: 12, fontWeight: FontWeight.w600),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 08, bottom: 08, left: 40),
+                padding: const EdgeInsets.only(
+                  top: 8,
+                  left: 160,
+                ),
                 child: ElevatedButton(
-                  onPressed: widget.onAddToCart, // Use the callback here
+                  onPressed: onAddToCart,
                   style: ElevatedButton.styleFrom(
                       shape: const RoundedRectangleBorder(),
                       backgroundColor: Colors.red[100]),

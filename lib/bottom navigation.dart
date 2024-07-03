@@ -5,7 +5,8 @@ import 'inventry screen.dart';
 
 class BottomNavigation extends StatefulWidget {
   static const List<Widget> _widgetOptions = <Widget>[
-    InventryScreen(),CartPage()
+    InventryScreen(),
+    CartPage()
   ];
 
 
@@ -22,6 +23,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
     setState(() {
       _selectedIndex = index;
     });
+
   }
 
   @override

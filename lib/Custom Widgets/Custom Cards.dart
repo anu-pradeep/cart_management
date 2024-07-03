@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-// void main() {
-//   runApp(const MaterialApp(
-//     home: CardsCustomized(),
-//   ));
-// }
-
 class CardsCustomized extends StatelessWidget {
   const CardsCustomized({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding:  const EdgeInsets.all(8.0),
       child: Card(
         color: Colors.blue[50],
         child: Column(

@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// void main() {
-//   runApp( MaterialApp(
-//     home: CommonAppbar(),
-//   ));
-// }
 
 class CommonAppbar extends StatefulWidget implements PreferredSizeWidget {
   const CommonAppbar(
@@ -115,58 +110,31 @@ class _CommonAppbarState extends State<CommonAppbar> {
                           Text(
                             widget.tabtext1,
                             style:
-                                GoogleFonts.abyssinicaSil(color: Colors.black),
+                            GoogleFonts.abyssinicaSil(color: Colors.black),
                           ),
                           const SizedBox(
                             width: 50,
                           ),
-                          Container(
-                            decoration: const BoxDecoration(
-                              color: Colors.red,
-                              shape: BoxShape.circle,
-                            ),
-                            height: 20,
-                            width: 20,
-                            child: Center(
-                                child: Text(
-                              "2",
-                              style: GoogleFonts.abyssinicaSil(
-                                  color: Colors.white),
-                            )),
-                          )
+
                         ],
                       ),
                     ),
                   ),
                   Tab(
                       child: Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Row(
-                      children: [
-                        Text(
-                          widget.tabtext2,
-                          style: GoogleFonts.abyssinicaSil(color: Colors.black),
+                        padding: const EdgeInsets.only(left: 20),
+                        child: Row(
+                          children: [
+                            Text(
+                              widget.tabtext2,
+                              style: GoogleFonts.abyssinicaSil(color: Colors.black),
+                            ),
+                            const SizedBox(
+                              width: 50,
+                            ),
+                          ],
                         ),
-                        const SizedBox(
-                          width: 50,
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: Colors.red,
-                            shape: BoxShape.circle,
-                          ),
-                          height: 20,
-                          width: 20,
-                          child: Center(
-                              child: Text(
-                            "2",
-                            style:
-                                GoogleFonts.abyssinicaSil(color: Colors.white),
-                          )),
-                        )
-                      ],
-                    ),
-                  )),
+                      )),
                 ],
                 indicatorColor: Colors.red[900],
                 indicatorSize: TabBarIndicatorSize.tab,
