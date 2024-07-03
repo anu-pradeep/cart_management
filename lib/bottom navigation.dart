@@ -35,8 +35,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: Colors.red[800],
+        unselectedItemColor: Colors.blue,
 
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

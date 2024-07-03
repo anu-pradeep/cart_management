@@ -36,7 +36,7 @@ class _CommonAppbarState extends State<CommonAppbar> {
                   padding: const EdgeInsets.only(right: 75, top: 10),
                   child: Text(
                     "Locations",
-                    style: GoogleFonts.abyssinicaSil(fontSize: 11,color: Colors.redAccent),
+                    style: GoogleFonts.abyssinicaSil(fontSize: 11,color: Colors.red[800]),
                   ),
                 ),
                 Row(
@@ -44,7 +44,7 @@ class _CommonAppbarState extends State<CommonAppbar> {
                     Text(
                       "Location Details",
                       style: GoogleFonts.abyssinicaSil(
-                          fontSize: 12, fontWeight: FontWeight.bold,color: Colors.redAccent),
+                          fontSize: 12, fontWeight: FontWeight.bold,color: Colors.red[800]),
                     ),
                     IconButton(
                       onPressed: () {},
@@ -132,6 +132,7 @@ class _CommonAppbarState extends State<CommonAppbar> {
                             const SizedBox(
                               width: 50,
                             ),
+
                           ],
                         ),
                       )),

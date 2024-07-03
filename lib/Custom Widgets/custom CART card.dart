@@ -76,7 +76,7 @@ class CartCard extends StatelessWidget {
                     "ADD TO CART",
                     style: GoogleFonts.abyssinicaSil(
                         fontWeight: FontWeight.w500,
-                        color: Colors.red,
+                        color: Colors.red[800],
                         fontSize: 15),
                   ),
                 ),
