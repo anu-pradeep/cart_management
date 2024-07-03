@@ -19,6 +19,13 @@ class _CartPageState extends State<CartPage> {
     });
   }
 
+  void _removeFromCart (Product product)
+  {
+    setState(() {
+      _cart.remove(product);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -131,23 +138,28 @@ class _CartPageState extends State<CartPage> {
                 ],
               ),
             ),
-            // Second Tab View
-            Center(
+     // ****** Second Tab View cart screen ******
+            SingleChildScrollView(
               child: Column(
                 children: _cart.map((product) {
-                  return ListTile(
-                    tileColor: Colors.blue[50],
-                    // leading: Image.network(product.image),
-                    title: Text(
-                      product.name,
-                      style: GoogleFonts.abyssinicaSil(
-                          fontWeight: FontWeight.bold),
-                    ),
-                    // subtitle: Text(product.details),
-                    trailing: Text(
-                      product.rate,
-                      style: GoogleFonts.abyssinicaSil(
-                          fontWeight: FontWeight.bold, fontSize: 15),
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ListTile(
+                      tileColor: Colors.blue[50],
+                      title: Text(
+                        product.name,
+                        style: GoogleFonts.abyssinicaSil(
+                            fontWeight: FontWeight.bold,color: Colors.red[900]),
+                      ),
+                      subtitle: Text(
+                        product.rate,
+                        style: GoogleFonts.abyssinicaSil(
+                            fontWeight: FontWeight.bold, fontSize: 15),
+                      ),
+                      trailing: IconButton(onPressed: (){
+                        _removeFromCart(product);
+                      },
+                          icon: Icon(Icons.delete,color: Colors.blueGrey,)),
                     ),
                   );
                 }).toList(),
@@ -161,15 +173,11 @@ class _CartPageState extends State<CartPage> {
 }
 
 class Product {
-  // final String image;
   final String name;
-  // final String details;
   final String rate;
 
   Product({
-    // required this.image,
     required this.name,
-    // required this.details,
     required this.rate,
   });
 }

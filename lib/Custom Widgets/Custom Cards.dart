@@ -13,7 +13,7 @@ class CardsCustomized extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, right: 10, left: 10, bottom: 160),
+      padding: const EdgeInsets.all(8.0),
       child: Card(
         color: Colors.blue[50],
         child: Column(
