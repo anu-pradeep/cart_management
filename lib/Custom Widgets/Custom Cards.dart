@@ -140,7 +140,7 @@ class CardsCustomized extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 330),
               child: Text(
-                "Customer Details",
+                "Ticket Details",
                 style: GoogleFonts.abyssinicaSil(color: Colors.grey),
               ),
             ),
